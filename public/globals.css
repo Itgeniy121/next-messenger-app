@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap");
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  line-height: 18px;
+  background: #1c1e33;
+  color: #fbffff;
+}
+.nunito {
+  font-family: "Nunito Sans", sans-serif;
+}
+.Manr {
+  font-family: "Manrope", sans-serif;
+}
+
+.main__container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.container {
+  max-width: 1600px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+.inputbg{
+  background: url("../src/assets/userInput.png") no-repeat center left;
+}

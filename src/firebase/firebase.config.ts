@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-
+import { getStorage } from "firebase/storage";
 const app = initializeApp({
   apiKey: "AIzaSyC-2bvS87YvhAHZZt_vSCy934oTMndUXeA",
   authDomain: "messenger-next-68311.firebaseapp.com",
@@ -14,6 +14,6 @@ const app = initializeApp({
 
 const auth = getAuth(app);
 const firestore = getFirestore(app);
-
-export { firestore, auth };
+const storage = getStorage(app)
+export { firestore, auth, storage };
 export default app;

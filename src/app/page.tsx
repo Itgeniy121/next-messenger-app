@@ -10,6 +10,7 @@ export default function Home() {
       if(!user && !localStorage.getItem('logged')){
         router.push('/login')
       }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
   return (
     <div className="w-full sidebar:bg-[#E4EBF1] dark:sidebar:bg-[#1c1e33] h-[100vh] sidebar:justify-start flex flex-row justify-center items-center relative">

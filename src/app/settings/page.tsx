@@ -12,6 +12,7 @@ const page = () => {
         if(!user && !localStorage.getItem('logged')){
           router.push('/login')
         }
+           // eslint-disable-next-line react-hooks/exhaustive-deps
       },[])
   return (
     <div className="w-full bg-[#E4EBF1] dark:bg-[#1c1e33] h-[100vh] flex flex-row-reverse justify-center items-start relative">

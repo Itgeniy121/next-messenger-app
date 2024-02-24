@@ -1,12 +1,12 @@
 'use client'
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import AllChats from "@/components/sections/main/allChats/AllChats";
 import useAuth from "@/hooks/useAuth";
 export default function Home() {
   const {user, isLoading} = useAuth()
   const router = useRouter()
-    useLayoutEffect(() => {
+    useEffect(() => {
       if(!user && !localStorage.getItem('logged')){
         router.push('/login')
       }

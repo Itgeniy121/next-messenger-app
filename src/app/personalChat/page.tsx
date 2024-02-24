@@ -2,11 +2,11 @@
 import SideBar from "@/components/UI/SideBar"
 import useAuth from "@/hooks/useAuth"
 import { useRouter } from "next/navigation"
-import { useLayoutEffect } from "react"
-const page = () => {
+import { useEffect } from "react"
+const Page = () => {
     const {user, isLoading} = useAuth()
     const router = useRouter()
-    useLayoutEffect(() => {
+    useEffect(() => {
       if(!user && !localStorage.getItem('logged')){
         router.push('/login')
            // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -24,4 +24,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

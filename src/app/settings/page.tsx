@@ -1,14 +1,14 @@
 'use client'
 import React from 'react'
 import useAuth from "@/hooks/useAuth"
-import { useLayoutEffect } from "react"
+import { useEffect } from "react"
 import SideBar from "@/components/UI/SideBar"
 import { useRouter } from 'next/navigation'
 import Settings from '@/components/sections/settings/Settings'
-const page = () => {
+const Page = () => {
     const router = useRouter()
     const {user, isLoading} = useAuth()
-    useLayoutEffect(() => {
+    useEffect(() => {
         if(!user && !localStorage.getItem('logged')){
           router.push('/login')
         }
@@ -27,4 +27,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

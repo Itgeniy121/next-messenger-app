@@ -2,14 +2,14 @@
 import SideBar from "@/components/UI/SideBar"
 import useAuth from "@/hooks/useAuth"
 import { useRouter } from "next/navigation"
-import { useLayoutEffect } from "react"
+import { useEffect } from "react"
 import ChatRoom from "@/components/sections/chatRoom/ChatRoom"
 import { useParams } from "next/navigation"
-const page = () => {
+const Page = () => {
   const {user, isLoading} = useAuth()
   const router = useRouter()
   const params: any = useParams()
-  useLayoutEffect(() => {
+  useEffect(() => {
     if(!user && !localStorage.getItem('logged')){
       router.push('/login')
     }
@@ -28,4 +28,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

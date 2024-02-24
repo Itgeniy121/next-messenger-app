@@ -1,14 +1,14 @@
 'use client'
 import useAuth from "@/hooks/useAuth"
-import { useLayoutEffect } from "react"
+import { useEffect } from "react"
 import SideBar from "@/components/UI/SideBar"
 import Profile from "@/components/sections/profile/Profile"
 import { useRouter, useParams } from "next/navigation"
-const page = () => {
+const Page = () => {
     const {user, isLoading} = useAuth()
     const params: any = useParams()
     const router = useRouter()
-    useLayoutEffect(() => {
+    useEffect(() => {
         if(!user && !localStorage.getItem('logged')){
           router.push('/login')
              // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,4 +27,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

@@ -1,12 +1,12 @@
-import { bindActionCreators } from "@reduxjs/toolkit";
-import { useDispatch } from "react-redux";
-import {themeActions} from "@/store/reducres/ThemeSlice"
+import { bindActionCreators } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
+import { themeActions } from '@/store/reducres/ThemeSlice';
 
 const actions = {
-  ...themeActions,
+    ...themeActions,
 };
 
 export const useActions = () => {
-  const dispatch = useDispatch();
-  return bindActionCreators(actions, dispatch);
+    const dispatch = useDispatch();
+    return bindActionCreators(actions, dispatch);
 };

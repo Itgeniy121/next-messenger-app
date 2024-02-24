@@ -9,6 +9,7 @@ Frontdend:
 4. Next-themes☀️
 5. Eslint
 6. Prettier
+
 Backend:
 1. Firebase Auth🔥
 2. Firebase Database📚

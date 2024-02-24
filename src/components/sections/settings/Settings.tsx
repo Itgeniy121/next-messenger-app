@@ -23,15 +23,16 @@ const Settings: FC<settingsProps> = ({user}) => {
           }
       }, [])
     useEffect(() =>{
-        setIsLoading(prev => !prev)
+        setIsLoading(true)
         if(img && user){
             uploadNewAvatar(img, user).finally(() =>{
-                setIsLoading(prev => !prev)
+                setIsLoading(false)
             }).catch(()=>{
                 alert('Что-то пошло не так')
-                setIsLoading(prev => !prev)
+                setIsLoading(false)
             })
         }
+        setIsLoading(false)
     }, [img])
     const avatarUpdate = () =>{
         let file = document.getElementById('file')

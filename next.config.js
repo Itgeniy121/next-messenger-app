@@ -11,9 +11,13 @@ const nextConfig = {
               protocol: 'https',
               hostname: 'lh3.googleusercontent.com',
               port: '',
+            },
+            {
+              protocol: 'https',
+              hostname: 'fluffy-gaufre-12f23b.netlify.app',
+              port: '',
             }
         ],
       },
 }
-
 module.exports = nextConfig

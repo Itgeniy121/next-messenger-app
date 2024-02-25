@@ -5,10 +5,11 @@ P.S Пока что реализована только часть функци�
 Frontdend:
 1. Next.js + TypeScript
 2. Redux Toolkit⚛️
-3. Tailwind css💨
-4. Next-themes☀️
-5. Eslint
-6. Prettier
+3. React Hook Form
+4. Tailwind css💨
+5. Next-themes☀️
+6. Eslint
+7. Prettier
 
 Backend:
 1. Firebase Auth🔥

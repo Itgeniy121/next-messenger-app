@@ -26,7 +26,7 @@ const MessagesField = () => {
         >
             {messages &&
                 messages.map((m: any) => (
-                    <Message user={user} message={m} key={m.uid} />
+                    <Message user={user} message={m} key={m.date} />
                 ))}
         </div>
     );

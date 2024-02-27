@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600&display=swap');
 
 html {
   overflow-x: hidden;
@@ -15,10 +15,10 @@ body {
   color: #fbffff;
 }
 .nunito {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 .Manr {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .main__container {
@@ -57,7 +57,7 @@ li {
   content: '';
   width: 96px;
   height: 3px;
-  background: #FFF;
+  background: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -78,76 +78,81 @@ li {
 .loader2 {
   width: 48px;
   height: 48px;
-  border: 5px solid #FFF;
+  border: 5px solid #fff;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
-  }
+}
 
-  @keyframes rotation {
+@keyframes rotation {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  } 
-  :root {
-    --light: #d8dbe0;
-    --dark: #28292c;
-    --link: rgb(27, 129, 112);
-    --link-hover: rgb(24, 94, 82);
-  }
-  .toggle-switch {
-    position: relative;
-    width: 60px;
-    margin-bottom: 27px;
-  }
-  
-  .mylbl {
-    position: absolute;
-    width: 100%;
-    height: 25px;
-    background-color: var(--dark);
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  
-  .myinpt {
-    position: absolute;
-    display: none;
-  }
-  
-  .slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    transition: 0.3s;
-  }
-  
-  .myinpt:checked ~ .slider {
-    background-color: var(--light);
-  }
+}
+:root {
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  margin-bottom: 27px;
+}
 
-  .slider::before {
-    content: "";
-    position: absolute;
-    top: 3.5px;
-    left: 5px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    box-shadow: inset 10px -1px 0px 0px var(--light);
-    background-color: var(--dark);
-    transition: 0.3s;
-  }
-  
-  .myinpt:checked ~ .slider::before {
-    transform: translateX(33px);
-    background-color: var(--dark);
-    box-shadow: none;
-  }
-  
+.mylbl {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.myinpt {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.myinpt:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 3.5px;
+  left: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: inset 10px -1px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+.myinpt:checked ~ .slider::before {
+  transform: translateX(33px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+.authModal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.active {
+  display: flex !important;
+}

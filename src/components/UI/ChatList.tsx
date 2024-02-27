@@ -33,14 +33,14 @@ const ChatList = ({ user }: any) => {
                 Object.entries(chats)
                     ?.sort((a: any, b: any) => b[1]?.date - a[1]?.date)
                     .map((chat: any) => (
-                        <ChatItem
+                        <div>{chat[1]?.userInfo && (<ChatItem
                             lastMessage={chat[1]?.lastMessage?.text}
                             name={chat[1]?.userInfo?.name}
                             photoUrl={chat[1]?.userInfo?.photoUrl}
                             uid={chat[1]?.userInfo?.uid}
                             combinedUid={chat[1]?.userInfo?.combinedUid}
                             key={chat[1]?.userInfo?.combinedUid}
-                        />
+                        />)}</div>
                     ))}
         </div>
     );
